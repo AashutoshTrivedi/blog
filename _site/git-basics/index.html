@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Understanding Git and Github - Data Science by Aashutosh Trivedi</title>
+
+  <!-- Edit site and author settings in `_config.yml` to make the social details your own -->
+
+    <meta content="Data Science by Aashutosh Trivedi" property="og:site_name">
+  
+    <meta content="Understanding Git and Github" property="og:title">
+  
+  
+    <meta content="article" property="og:type">
+  
+  
+    <meta content="#Write an awesome description for your new site here. You can edit this #line in _config.yml. It will appear in your document head meta (for #Google search results) and in your feed.xml site description.
+" property="og:description">
+  
+  
+    <meta content="http://localhost:4000/git-basics/" property="og:url">
+  
+  
+    <meta content="2020-12-02T22:08:20+05:30" property="article:published_time">
+    <meta content="http://localhost:4000/about/" property="article:author">
+  
+  
+    <meta content="http://localhost:4000/Presentations/assets/img/aashu.jpg" property="og:image">
+  
+  
+    
+    <meta content="git" property="article:section">
+    
+  
+  
+    
+  
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:creator" content="@">
+  
+    <meta name="twitter:title" content="Understanding Git and Github">
+  
+  
+    <meta name="twitter:url" content="http://localhost:4000/git-basics/">
+  
+  
+    <meta name="twitter:description" content="#Write an awesome description for your new site here. You can edit this #line in _config.yml. It will appear in your document head meta (for #Google search results) and in your feed.xml site description.
+">
+  
+  
+    <meta name="twitter:image:src" content="http://localhost:4000/Presentations/assets/img/aashu.jpg">
+  
+
+	<meta name="description" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:image" content="">
+	<link rel="shortcut icon" href="/Presentations/assets/img/favicon/favicon.png" type="image/png">
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#263959">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#263959">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#263959">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700|Lato:300,400,700&display=swap" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="/Presentations/assets/fonts/font-awesome/css/font-awesome.min.css">
+	<!-- Styles -->
+	<link rel="stylesheet" href="/Presentations/assets/css/main.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <aside class="sidebar">
+  <header>
+    <div class="about">
+      <br>
+      <div class="cover-author-image">
+        <a href="/Presentations/"><img src="/Presentations/assets/img/aashu.jpg" alt="Presentations"></a>
+      </div>
+      <div class="author-name">
+      <br>
+      <a href="/Presentations/">Presentations</a>
+      <br>
+      -
+      <br>
+      <a href = "https://aashutoshtrivedi.github.io">Aashutosh Trivedi</a></div>
+      <p>This blog repository/website contains the presentations created and delivered by me at various event.</p>
+
+    </div>
+  </header> <!-- End Header -->
+  <footer>
+    <section class="contact">
+      <h3 class="contact-title">Contact me</h3>
+      <ul>
+        
+          <li><a href="https://twitter.com/aashu_trivedi_" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        
+        
+          <li><a href="https://facebook.com/ashutosh.trivedi.503" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        
+        
+          <li class="github"><a href="http://github.com/AashutoshTrivedi" target="_blank"><i class="fa fa-github"></i></a></li>
+        
+        
+          <li class="linkedin"><a href="https://in.linkedin.com/in/aashutosh-trivedi-a90514139/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+        
+        
+          <li class="email"><a href="mailto:aashu.iitjammu@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
+        
+      </ul>
+    </section> <!-- End Section Contact -->
+    <div class="copyright">
+      <p>2021 &copy; Aashutosh Trivedi</p>
+    </div>
+  </footer> <!-- End Footer -->
+</aside> <!-- End Sidebar -->
+<div class="content-box clearfix">
+  <article class="article-page">
+  <div class="page-content">
+    
+    
+    <div class="wrap-content">
+      <header class="header-page">
+        <h1 class="page-title">Understanding Git and Github</h1>
+        <div class="page-date"><span>2020, Dec 02&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      </header>
+      <p>Git is a open source version control system. Basically it’s a software where we can manage and build the different versions of our software. It is a distributed service that contains history, edits, updates of the files.  GitHub on the other hand is a repository hosting service which is like a server that contains all our files and has git software installed on it.
+<!--
+Still difficult? Ok lets take an example why git is used and what makes it an integral part of the IT community. The typical software cycle involves a lot of steps like development, deployment, testing etc involving a large number of people working in collaboration. --></p>
+
+<p>In this article we’ll dive into two methods to initiate and work on a project locally and how to connect it remotely to a repository hosting service like GitHub or bit-bucket.</p>
+
+<hr />
+
+<p>The first method is by cloning an existing repo on github or any other hosting sote.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  git clone https://examplerepo.org/something.git <span class="c">#creates a empty git repository in your local server</span>
+</code></pre></div></div>
+<p>This will create a copy of a repo on your local pc where you can start changing the files.
+Once we have done necessary changes and our files are ready we can add it back online using following commands.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  git add <span class="nb">.</span> <span class="c">#adds all the files to the local index</span>
+  git commit <span class="nt">-m</span> <span class="s2">"any comment here"</span>
+  git push origin master <span class="c"># to push the changes to the master branch</span>
+</code></pre></div></div>
+<hr />
+
+<p>The  second method is to intitialize an emtpy git repo and then create a link online to github repo.
+This can be done by</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  git init <span class="c"># create an empty repo</span>
+  git <span class="nb">echo</span> <span class="s2">"# hello world"</span> <span class="o">&gt;</span> readme.md <span class="c"># create a readme files</span>
+  git add <span class="nb">.</span> <span class="c"># adds into local</span>
+  git remote add origin https://examplerepo.org/something.git
+  git push <span class="nt">--set-upstream</span> origin master
+</code></pre></div></div>
+<p>This will push all the files to the master branch of the repository hosted online.</p>
+
+<p>We can create a branch and push the changes as follows:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  git checkout <span class="nt">-b</span> brache1 <span class="c"># created a branch from master</span>
+  git remote add origin https://examplerepo.org/something.git
+  git push <span class="nt">--set-upstream</span> origin branch1
+</code></pre></div></div>
+
+<p>Here are few links to understand this topic in further detail:</p>
+<ul>
+  <li><a href="https://rogerdudler.github.io/git-guide/">Roger Dudler’s guide</a></li>
+  <li><a href="https://guides.github.com/activities/hello-world/">GitHub’s official guide</a></li>
+</ul>
+
+      <div class="page-footer">
+        <div class="page-share">
+          <a href="https://twitter.com/intent/tweet?text=Understanding Git and Github&url=http://localhost:4000/git-basics/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
+          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/git-basics/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>
+          <a href="https://plus.google.com/share?url=http://localhost:4000/git-basics/" title="Share on Google+" rel="nofollow" target="_blank">Google+</a>
+        </div>
+        <!-- <div class="page-tag">
+          
+        </div> -->
+      </div>
+      <!-- <section class="comment-area">
+  <div class="comment-wrapper">
+    
+    <div id="disqus_thread" class="article-comments"></div>
+    <script>
+      (function() {
+          var d = document, s = d.createElement('script');
+          s.src = '//aashutrivedi.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+  </div>
+</section> <!-- End Comment Area -->
+ -->
+    </div> <!-- End Wrap Content -->
+  </div> <!-- End Page Content -->
+</article> <!-- End Article Page -->
+
+</div>
+
+  </div>
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script> <!-- End Analytics -->
+
+</body>
+</html>
