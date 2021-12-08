@@ -5,7 +5,7 @@ comments: true
 categories: git
 date: 2020-12-02 16:38:20
 i: true
-image: https://github.githubassets.com/images/modules/open_graph/github-mark.png
+img: https://github.githubassets.com/images/modules/open_graph/github-mark.png
 k: true
 ---
 
