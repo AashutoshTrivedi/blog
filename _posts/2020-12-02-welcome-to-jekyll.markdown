@@ -4,8 +4,7 @@ title:  "What is Jekyll?"
 date:   2020-12-02
 comments: true
 categories: jekyll update
-i: true
-image: https://jekyllrb.com/img/octojekyll.png
+img: https://jekyllrb.com/img/jekyll-og.png
 k: true
 ---
 
