@@ -1,8 +1,9 @@
 ---
-layout: main
+layout: default
+comments: true
 ---
 <article class="article-page">
-  <div class="page-content">
+  <div class="">
     {% if page.img %}
     <div class="page-cover-image">
       <!-- <figure>
@@ -32,7 +33,9 @@ layout: main
           {% endfor %}
         </div> -->
       </div>
-      <!-- {% include disqus.html %} -->
+     {% if page.comments %}
+       {% include disqus.html %}
+     {% endif %}
     </div> <!-- End Wrap Content -->
   </div> <!-- End Page Content -->
 </article> <!-- End Article Page -->
